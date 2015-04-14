@@ -7,9 +7,12 @@
 //
 
 #include <stdio.h>
+#include <time.h>
+
 
 int main(int argc, const char * argv[]) {
-    int array[9][5] = {{1,2,3,4,5},{3,4,4,4,4},{1,0,1,2,2},{5,6,2,1,1},{10,1,5,3,8},{2,1,8,6,2},{43,8,5,1,9},{2,8,9,3,2},{4,6,5,9,1}};
+    clock_t tic = clock();
+    int array[9][5] = {{1,2,3,4,5},{3,4,4,4,4},{1,0,1,2,2},{5,6,2,1,1},{10,1,5,3,8},{2,1,8,6,2},{43,8,5,1,9},{2,8,9,1,2},{4,6,5,9,1}};
     int captured_points[9][5];
     int x_array_length = 9;
     int y_array_length = 5;
@@ -32,12 +35,13 @@ int main(int argc, const char * argv[]) {
     printf("\n");
     
     for (int i = 0; i < size; i++) {
-        for (int j = 0; j < y_array_length; j++) {
-            array[captured_points[i][0]][j] = 0;
+        for (int j = 0; j < x_array_length; j++) {
+            array[j][captured_points[i][1]] = 0;
+
         }
         printf("\n");
-        for (int k = 0; k < x_array_length; k++) {
-            array[k][captured_points[i][1]] = 0;
+        for (int k = 0; k < y_array_length; k++) {
+            array[captured_points[i][0]][k] = 0;
         }
     }
     
@@ -51,5 +55,8 @@ int main(int argc, const char * argv[]) {
         }
         printf("\n");
     }
+    clock_t toc = clock();
+    printf("Elapsed: %f seconds\n", (double)(toc - tic) / CLOCKS_PER_SEC);
+
     return 0;
 }
