@@ -1,5 +1,7 @@
 # matrices
 
+Finds 0's and then 0's out that column and row
+
 example input 
 
 1 | 2 | 3 | 4 | 5<br>
