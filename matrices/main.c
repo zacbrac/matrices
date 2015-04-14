@@ -9,15 +9,15 @@
 #include <stdio.h>
 
 int main(int argc, const char * argv[]) {
-    int array[5][3] = {{1,2,3},{3,4,4},{1,0,1},{5,6,2},{10,1,5}};
-    int captured_points[5][3];
-    int x_array_length = 5;
-    int y_array_length = 3;
+    int array[9][5] = {{1,2,3,4,5},{3,4,4,4,4},{1,0,1,2,2},{5,6,2,1,1},{10,1,5,3,8},{2,1,8,6,2},{43,8,5,1,9},{2,8,9,3,2},{4,6,5,9,1}};
+    int captured_points[9][5];
+    int x_array_length = 9;
+    int y_array_length = 5;
     size_t size = 0;
     
     for (int i = 0; i < x_array_length; i++) {
         for (int j = 0; j < y_array_length; j++) {
-            if (j == 2) {
+            if (j == 4) {
                 printf("%d",array[i][j]);
             } else {
                 printf("%d,",array[i][j]);
@@ -43,7 +43,7 @@ int main(int argc, const char * argv[]) {
     
     for (int i = 0; i < x_array_length; i++) {
         for (int j = 0; j < y_array_length; j++) {
-            if (j == 2) {
+            if (j == 4) {
                 printf("%d",array[i][j]);
             } else {
                 printf("%d,",array[i][j]);
