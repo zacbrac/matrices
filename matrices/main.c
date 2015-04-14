@@ -17,20 +17,39 @@ int main(int argc, const char * argv[]) {
     
     for (int i = 0; i < x_array_length; i++) {
         for (int j = 0; j < y_array_length; j++) {
+            if (j == 2) {
+                printf("%d",array[i][j]);
+            } else {
+                printf("%d,",array[i][j]);
+            }
             if (array[i][j] == 0) {
                 captured_points[size][0] = i;
                 captured_points[size++][1] = j;
             }
         }
+        printf("\n");
     }
+    printf("\n");
     
     for (int i = 0; i < size; i++) {
         for (int j = 0; j < y_array_length; j++) {
             array[captured_points[i][0]][j] = 0;
         }
+        printf("\n");
         for (int k = 0; k < x_array_length; k++) {
             array[k][captured_points[i][1]] = 0;
         }
+    }
+    
+    for (int i = 0; i < x_array_length; i++) {
+        for (int j = 0; j < y_array_length; j++) {
+            if (j == 2) {
+                printf("%d",array[i][j]);
+            } else {
+                printf("%d,",array[i][j]);
+            }
+        }
+        printf("\n");
     }
     return 0;
 }
