@@ -12,7 +12,7 @@
 
 int main(int argc, const char * argv[]) {
     clock_t tic = clock();
-    int array[9][5] = {{1,2,3,4,5},{3,4,4,4,4},{1,0,1,2,2},{5,6,2,1,1},{10,1,5,3,8},{2,1,8,6,2},{43,8,5,1,9},{2,8,9,1,2},{4,6,5,9,1}};
+    int array[9][5] = {{1,2,3,4,5},{3,4,4,4,4},{1,0,1,2,2},{5,6,2,1,1},{1,1,5,3,8},{2,1,8,6,2},{4,8,5,1,9},{2,8,9,1,2},{4,6,5,9,1}};
     int captured_points[9][5];
     int x_array_length = 9;
     int y_array_length = 5;
@@ -23,7 +23,7 @@ int main(int argc, const char * argv[]) {
             if (j == 4) {
                 printf("%d",array[i][j]);
             } else {
-                printf("%d,",array[i][j]);
+                printf("%d|",array[i][j]);
             }
             if (array[i][j] == 0) {
                 captured_points[size][0] = i;
@@ -50,7 +50,7 @@ int main(int argc, const char * argv[]) {
             if (j == 4) {
                 printf("%d",array[i][j]);
             } else {
-                printf("%d,",array[i][j]);
+                printf("%d|",array[i][j]);
             }
         }
         printf("\n");
