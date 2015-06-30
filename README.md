@@ -2,7 +2,7 @@
 
 Made in response to 
 
-`Write an algorithm such that if an element in an MxN matrix is 0, its entire row and column is set to 0.`
+>"Write an algorithm such that if an element in an MxN matrix is 0, its entire row and column is set to 0."
 
 Finds 0's and then 0's out that column and row
 
